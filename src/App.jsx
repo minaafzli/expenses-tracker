@@ -16,7 +16,7 @@ const router = createBrowserRouter([
     element: <AnalyticsPage />
   },
   {
-    path: '/addExpense',
+    path: '/add-expense',
     element: <AddExpensePage />
   }
  ]

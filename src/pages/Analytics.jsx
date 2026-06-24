@@ -1,6 +1,11 @@
+import DonutChart from "../components/DonutChart"
+
 function AnalyticsPage() {
-    return (
-     <h1>Analytics</h1>
+    return (<>
+     <DonutChart/>
+     
+    </>
+
     )
 }
 
