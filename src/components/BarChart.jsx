@@ -1,27 +1,39 @@
 
 import { AgCharts } from "ag-charts-react";
-import groupExpensesByDate from "./GroupExpensesByDate";
+import groupTransactionsByDate from "./groupTransactionsByDate";
 import { expenses } from "../data/expenses";
+import { incomes } from "../data/incomes";
 
-// const chartData = groupExpensesByDate(expenses);
-const chartData = groupExpensesByDate(expenses).map(item => ({
+
+const dataMap = {
+  expenses,
+  incomes
+}
+
+
+function BarChart({type='expenses'}) {
+const transactions = dataMap[type] ?? expenses;
+
+const chartData = groupTransactionsByDate(transactions)
+  .map(item=>({
     ...item,
-    date: new Date(item.date).toLocaleDateString("en-GB", {
-        day: "2-digit",
-        month: "2-digit",
+    date:new Date(item.date)
+    .toLocaleDateString("en-GB",{
+       day:"2-digit",
+       month:"2-digit"
     })
-}));
+  }));
+  
 
-function BarChart() {
-    
+
     const options = {
-        data: chartData,
+        data:chartData,
 
   theme: "ag-default",
 
   title: {
 
-    text: "Daily Expenses",
+    text: `Daily ${type}`,
 
     fontFamily: "Inter, system-ui, -apple-system, sans-serif",
 
@@ -84,7 +96,7 @@ function BarChart() {
 
       title: {
 
-        text: "Total Expenses",
+        text: `total ${type}`,
 
       },
 

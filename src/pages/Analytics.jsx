@@ -23,8 +23,9 @@ function AnalyticsPage() {
                 <ExpensesTable limit={'100'} title={'Expenses Table'}/>
             </div>
 
-        <div className="py-4">
-            <BarChart/>
+        <div className="py-4 flex flex-col gap-4">
+            <BarChart input={'expends'}/>
+            <BarChart input={'Incomes'}/>
         </div>
      
     </div>

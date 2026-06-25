@@ -9,7 +9,6 @@ const cartsValues=[
     {title:'Expenses' , amount:'$5,502.45',amountColor:'' , id:'2'} ,
 ]
 function DashboardPage() {
-    
     return (
         <div className="md:px-12 px-4 h-full">
             <div className="flex justify-between items-center mb-4 gap-4 ">
