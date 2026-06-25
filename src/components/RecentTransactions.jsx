@@ -15,13 +15,14 @@ import { expenses } from '../data/expenses';
         headerBackgroundColor: "#f4f4f5",
         headerFontWeight: 600,
         headerTextColor: "#919191",
-        oddRowBackgroundColor: "#F9FAFB",
+        oddRowBackgroundColor:'#eff6fa',
         rowBorder: false,
         sidePanelBorder: true,
         spacing: 8,
         wrapperBorder: false,
         wrapperBorderRadius: 0,
     });
+
 
 const modules = [AllCommunityModule];
 
@@ -50,16 +51,21 @@ const colDefs = [
   
 };
 
-function ExpensesTable() {
-   
+function ExpensesTable({limit ,title}) {
+
+   const recentExpenses = expenses
+  .sort((a,b)=> new Date(b.date) - new Date(a.date))
+  .slice(0, limit);
+
+
     return (
   <AgGridProvider modules={modules}  >
     <div className='flex flex-col items-center'>
-    <p className='text-center mb-2 font-bold text-text-muted'>Expenses Table</p>
-    <div className="h-96 md:w-160 mx-2 w-90 border rounded-2xl overflow-hidden border-gray-200 ">
+    <p className='text-center mb-2 font-bold text-text-muted'>{title}</p>
+    <div className="h-66 md:w-160 mx-2 w-90 border rounded-2xl overflow-hidden border-gray-200 ">
       <AgGridReact
       theme={myTheme}
-      rowData={expenses}
+      rowData={recentExpenses}
       columnDefs={colDefs}
       defaultColDef={defaultColDef}
       

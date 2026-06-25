@@ -9,7 +9,7 @@ const timingPeriods =[
 
 function TimePeriods() {
     return (
-        <div>
+        <div className="w-fit py-4 ">
              <ul className="flex border border-border rounded-md overflow-hidden divide-x ">
                     {timingPeriods.map((time) => (
                         <li

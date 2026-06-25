@@ -44,7 +44,7 @@ series:[
 function DonutChart(){
 
 return (
- <div className="md:w-96 w-90  border rounded-2xl overflow-hidden  my-4 border-gray-200 ">
+ <div className="md:w-96 w-86  border rounded-2xl overflow-hidden  my-4 border-gray-200 ">
    <AgCharts options={options}/>
  </div>
 )

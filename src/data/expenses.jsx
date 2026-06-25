@@ -56,91 +56,91 @@ export const expenses = [
   date:"2026-05-01"
  },
  {
-  id:8,
+  id:9,
   title:"travel",
   asset:"travel",
   amount:200,
   date:"2026-05-01"
  },
  {
-  id:8,
+  id:10,
   title:"travel",
   asset:"travel",
   amount:200,
   date:"2026-05-01"
  },
  {
-  id:8,
+  id:11,
   title:"travel",
   asset:"travel",
   amount:200,
   date:"2026-05-01"
  },
  {
-  id:8,
+  id:12,
+  title:"travel",
+  asset:"travel",
+  amount:20000,
+  date:"2026-05-01"
+ },
+ {
+  id:13,
   title:"travel",
   asset:"travel",
   amount:200,
   date:"2026-05-01"
  },
  {
-  id:8,
-  title:"travel",
-  asset:"travel",
-  amount:200,
-  date:"2026-05-01"
- },
- {
-  id:8,
+  id:14,
   title:"travel",
   asset:"travel",
   amount:2000,
   date:"2026-05-01"
  },
  {
-  id:8,
+  id:15,
   title:"travel",
   asset:"travel",
   amount:200,
   date:"2026-05-01"
  },
  {
-  id:8,
+  id:16,
   title:"travel",
   asset:"travel",
   amount:200,
   date:"2026-05-01"
  },
  {
-  id:8,
+  id:17,
   title:"travel",
   asset:"travel",
   amount:200,
   date:"2026-05-01"
  },
  {
-  id:8,
+  id:18,
   title:"travel",
   asset:"travel",
   amount:200,
   date:"2026-05-01"
  },
  {
-  id:8,
+  id:19,
   title:"travel",
   asset:"travel",
   amount:200,
   date:"2026-05-01"
  },
  {
-  id:8,
+  id:20,
   title:"travel",
   asset:"travel",
   amount:200,
   date:"2026-05-01"
  },
  {
-  id:8,
+  id:21,
   title:"travelkkkkkkkkkkkkkkkk",
   asset:"travel",
   amount:200,

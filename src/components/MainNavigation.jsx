@@ -33,7 +33,7 @@ return (
 
 <header>
 
-<nav className="flex justify-between items-center md:px-12 px-4 py-4">
+<nav className="flex justify-between items-center md:px-12 border-b bg-primary-light border-gray-200 px-4 py-4">
 
 <img 
 src={logo} 
@@ -73,9 +73,6 @@ hover:text-primary
 
 </ul>
 
-
-
-{/* desktop icons */}
 
 <div className="
 hidden
@@ -120,7 +117,7 @@ className="
 md:hidden
 px-6
 pb-4
-
+ bg-primary-light
 "
 >
 
