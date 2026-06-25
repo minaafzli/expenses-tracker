@@ -32,7 +32,7 @@ const colDefs = [
  },
  {
   field:"asset",
-  headerName:"Category"
+  headerName:"Asset"
  },
  {
   field:"amount",
@@ -46,7 +46,6 @@ const colDefs = [
  const defaultColDef = {
   flex:1,
   sortable:true,
-  filter:true,
   resizable:true,
   
 };
@@ -55,9 +54,9 @@ function ExpensesTable() {
    
     return (
   <AgGridProvider modules={modules}  >
-    <div >
+    <div className='flex flex-col items-center'>
     <p className='text-center mb-2 font-bold text-text-muted'>Expenses Table</p>
-    <div className="h-96 w-200 border rounded-2xl overflow-hidden border-gray-200 ">
+    <div className="h-96 md:w-160 mx-2 w-90 border rounded-2xl overflow-hidden border-gray-200 ">
       <AgGridReact
       theme={myTheme}
       rowData={expenses}

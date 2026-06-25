@@ -14,7 +14,7 @@ function TimePeriods() {
                     {timingPeriods.map((time) => (
                         <li
                         key={time.id}
-                        className="p-2 cursor-pointer font-bold text-text-muted hover:bg-primary-light hover:text-primary"
+                        className="p-2 cursor-pointer font-bold text-text-muted hover:bg-primary-light hover:text-primary text-center"
                         >
                         {time.title}
                         </li>
