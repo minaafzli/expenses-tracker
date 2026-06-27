@@ -1,20 +1,20 @@
 
 import { AgCharts } from "ag-charts-react";
 import groupTransactionsByDate from "./groupTransactionsByDate";
-import { expenses } from "../data/expenses";
-import { incomes } from "../data/incomes";
+// import { expenses } from "../data/expenses";
+// import { incomes } from "../data/incomes";
 
 
-const dataMap = {
-  expenses,
-  incomes
-}
+// const dataMap = {
+//   expenses,
+//   incomes
+// }
 
 
-function BarChart({type='expenses'}) {
-const transactions = dataMap[type] ?? expenses;
+function BarChart({type='expenses' ,data }) {
+// const transactions = dataMap[type] ?? expenses;
 
-const chartData = groupTransactionsByDate(transactions)
+const chartData = groupTransactionsByDate(data)
   .map(item=>({
     ...item,
     date:new Date(item.date)
@@ -52,6 +52,11 @@ const chartData = groupTransactionsByDate(transactions)
       cornerRadius: 4,
 
       strokeWidth: 1,
+      
+      scrollbar: {
+        enabled: true,
+          visible: 'always',
+    },
 
       label: {
 

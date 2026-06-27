@@ -2,7 +2,7 @@ import { AllCommunityModule } from 'ag-grid-community';
 import { AgGridProvider } from 'ag-grid-react';
 import { AgGridReact } from 'ag-grid-react';
 import { themeQuartz, iconSetQuartzLight } from 'ag-grid-community';
-import { expenses } from '../data/expenses';
+// import { expenses } from '../data/expenses';
 
  const myTheme = themeQuartz
     .withPart(iconSetQuartzLight)
@@ -51,9 +51,9 @@ const colDefs = [
   
 };
 
-function ExpensesTable({limit ,title}) {
+function ExpensesTable({limit ,title ,data}) {
 
-   const recentExpenses = expenses
+   const recentData = data
   .sort((a,b)=> new Date(b.date) - new Date(a.date))
   .slice(0, limit);
 
@@ -65,7 +65,7 @@ function ExpensesTable({limit ,title}) {
     <div className="h-66 md:w-160 mx-2 w-90 border rounded-2xl overflow-hidden border-gray-200 ">
       <AgGridReact
       theme={myTheme}
-      rowData={recentExpenses}
+      rowData={recentData}
       columnDefs={colDefs}
       defaultColDef={defaultColDef}
       

@@ -1,27 +1,42 @@
 
-const timingPeriods =[
-    { title:'This month' , id: 'This-month' }, 
-    { title:'Last month' , id: 'Last-month' }, 
-    { title:'This year' , id: 'This-year' }, 
-    { title:'Last 12 months' , id: 'Last-12-months' }, 
-    
+const timingPeriods = [
+  { title:'This month', id:'thisMonth' },
+  { title:'Last month', id:'lastMonth' },
+  { title:'This year', id:'thisYear' },
+  { title:'Last 12 months', id:'last12Months' },
 ]
 
-function TimePeriods() {
-    return (
-        <div className="w-fit py-4 ">
-             <ul className="flex border border-border rounded-md overflow-hidden divide-x ">
-                    {timingPeriods.map((time) => (
-                        <li
-                        key={time.id}
-                        className="p-2 cursor-pointer font-bold text-text-muted hover:bg-primary-light hover:text-primary text-center"
-                        >
-                        {time.title}
-                        </li>
-                    ))}
-                    </ul>
-        </div>
-    )
+
+function TimePeriods({selectedPeriod, setSelectedPeriod}) {
+
+
+return (
+
+<ul className="flex border border-border rounded-md overflow-hidden divide-x">
+{
+timingPeriods.map((time)=>(<li
+        key={time.id}
+        onClick={()=>setSelectedPeriod(time.id)}
+        className={`
+        p-2 cursor-pointer font-bold text-text-muted hover:text-primary text-center ${
+        selectedPeriod === time.id 
+        ? `bg-blue-100 text-primary `
+        :""
+            }
+            `}
+>
+
+    {time.title}
+</li>
+
+))
+
+}
+
+</ul>
+
+)
+
 }
 
 export default TimePeriods

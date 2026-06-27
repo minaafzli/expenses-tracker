@@ -42,29 +42,11 @@ className="w-28"
 />
 
 
-<ul className="
-hidden 
-md:flex 
-gap-4 
-items-center
-">
+<ul className="hidden md:flex gap-4 items-center">{
+navItems.map((item)=>(<li key={item.path}>
 
-{
-navItems.map((item)=>(
-<li key={item.path}>
-
-<Link
-to={item.path}
-className="
-px-4 py-2
-font-bold
-text-text-muted
-rounded-xl
-hover:text-primary
-"
->
+<Link to={item.path}className="px-4 py-2 font-bold text-text-muted rounded-xl hover:text-primary">
 {item.title}
-
 </Link>
 
 </li>
@@ -74,10 +56,7 @@ hover:text-primary
 </ul>
 
 
-<div className="
-hidden
-md:flex
-">
+<div className="hidden md:flex">
 
 <img 
 src={setting}
@@ -113,20 +92,9 @@ cursor-pointer
 openMenu && (
 
 <div
-className="
-md:hidden
-px-6
-pb-4
- bg-primary-light
-"
+className="md:hidden px-6 pb-4 bg-primary-light"
 >
-
-
-<ul className="
-flex
-flex-col
-gap-3
-">
+<ul className="flex flex-col gap-3 ">
 {
 navItems.map((item)=>(
 
@@ -134,7 +102,7 @@ navItems.map((item)=>(
 
 <Link
 
-onClick={()=>setOpenMenu(false)}
+onClick={()=>{setOpenMenu(false)}}
 
 to={item.path}
 
