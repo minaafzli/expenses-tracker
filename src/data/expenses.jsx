@@ -112,12 +112,5 @@ amount:70,
 date:"2026-02-14"
 },
 
-{
-id:15,
-title:"Trip",
-asset:"Travel",
-amount:700,
-date:"2025-09-20"
-}
 
 ]

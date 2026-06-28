@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Cards from "../components/Cards";
 import DonutChart from "../components/DonutChart";
-import RecentTransactions from "../components/RecentTransactions";
+import RecentTransactions from "../components/RecentTransactionsTable";
 import TimePeriods from "../components/TimePeriods";
 import { expenses } from "../data/expenses";
 import filterByPeriod from "../utils/filterByPeriod";

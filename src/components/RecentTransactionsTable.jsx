@@ -2,7 +2,6 @@ import { AllCommunityModule } from 'ag-grid-community';
 import { AgGridProvider } from 'ag-grid-react';
 import { AgGridReact } from 'ag-grid-react';
 import { themeQuartz, iconSetQuartzLight } from 'ag-grid-community';
-// import { expenses } from '../data/expenses';
 
  const myTheme = themeQuartz
     .withPart(iconSetQuartzLight)
@@ -48,6 +47,7 @@ const colDefs = [
   flex:1,
   sortable:true,
   resizable:true,
+  
   
 };
 

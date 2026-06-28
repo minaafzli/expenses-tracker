@@ -1,8 +1,8 @@
 import {createBrowserRouter  , RouterProvider} from 'react-router-dom'
  import DashboardPage from './pages/Dashboard'
 import AnalyticsPage from './pages/Analytics'
-import AddExpensePage from './pages/AddExpense'
 import RootLayout from './pages/Root';
+import AddTransactionsPage from './pages/AddTransactions';
 
 
 const router = createBrowserRouter([
@@ -16,8 +16,8 @@ const router = createBrowserRouter([
     element: <AnalyticsPage />
   },
   {
-    path: '/add-expense',
-    element: <AddExpensePage />
+    path: '/add-transactions',
+    element: <AddTransactionsPage />
   }
  ]
  }

@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { useState } from 'react';
 
 import logo from '../assets/logo.svg'
@@ -18,17 +18,17 @@ const navItems = [
     path:"/analytics"
   },
   {
-    title:"Add Expense",
-    path:"/add-expense"
+    title:"Add Transactions",
+    path:"/add-transactions"
   }
 ]
 
 
 function MainNavigation() {
-
+const location = useLocation()
 const [openMenu,setOpenMenu] = useState(false);
 
-
+const linkClass = 'px-4 py-2 font-bold text-text-muted rounded-xl hover:text-primary';
 return (
 
 <header>
@@ -45,8 +45,12 @@ className="w-28"
 <ul className="hidden md:flex gap-4 items-center">{
 navItems.map((item)=>(<li key={item.path}>
 
-<Link to={item.path}className="px-4 py-2 font-bold text-text-muted rounded-xl hover:text-primary">
-{item.title}
+<Link to={item.path} className={`${linkClass}
+${location.pathname === item.path 
+? "bg-blue-100 text-primary"
+:""}
+`}>
+{item.title }
 </Link>
 
 </li>
@@ -98,23 +102,19 @@ className="md:hidden px-6 pb-4 bg-primary-light"
 {
 navItems.map((item)=>(
 
-<li key={item.path}>
+<li key={item.path} className='py-3'>
 
 <Link
 
-onClick={()=>{setOpenMenu(false)}}
+onClick={()=>{setOpenMenu(false) }}
 
 to={item.path}
 
-className="
-block
-px-4
-py-2
-rounded-xl
-font-bold
-text-text-muted
-hover:text-primary
-"
+className={`${linkClass} 
+${location.pathname === item.path 
+? "bg-blue-100 text-primary"
+:""}
+`}
 >
 
 {item.title}
@@ -135,16 +135,19 @@ mt-4
 
 <img 
 src={setting}
+alt='setting'
 className="w-8 cursor-pointer"
 />
 
 <img 
 src={notification}
+alt='notification'
 className="w-8 cursor-pointer"
 />
 
 <img 
 src={profile}
+alt='profile'
 className="w-10 cursor-pointer"
 />
 </div>

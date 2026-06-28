@@ -1,7 +1,7 @@
 import { useState } from "react"
 import BarChart from "../components/BarChart"
 import DonutChart from "../components/DonutChart"
-import ExpensesTable from "../components/RecentTransactions"
+import ExpensesTable from "../components/RecentTransactionsTable"
 import TimePeriods from "../components/TimePeriods"
 import { incomes } from "../data/incomes"
 import { expenses } from "../data/expenses"
